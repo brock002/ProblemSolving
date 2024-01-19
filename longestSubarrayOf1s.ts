@@ -56,3 +56,7 @@ const test = () => {
 	)
 }
 test()
+
+// this is to prevent other files from taking this file variables as block scoped variables
+// https://www.codingbeautydev.com/blog/typescript-cannot-redeclare-block-scoped-variable
+export {}
