@@ -1,5 +1,6 @@
 // question
 // https://leetcode.com/problems/asteroid-collision/description/
+
 const asteroidCollision = (asteroids: number[]): number[] => {
 	const stack: number[] = []
 

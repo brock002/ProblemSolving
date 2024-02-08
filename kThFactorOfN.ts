@@ -1,3 +1,6 @@
+// question
+// https://leetcode.com/problems/the-kth-factor-of-n/description/
+
 const kthFactor = (n: number, k: number): number => {
 	const factors1: number[] = []
 	const factors2: number[] = []
