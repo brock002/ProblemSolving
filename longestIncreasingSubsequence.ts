@@ -10,11 +10,10 @@ const lengthOfLIS = (nums: number[]): number => {
 		for (let j = i - 1; j >= 0; j--) {
 			if (nums[j] < nums[i]) {
 				const newMaxLen = maxDistances[j] + 1
-				currentMaxLen =
-					currentMaxLen > newMaxLen ? currentMaxLen : newMaxLen
+				currentMaxLen = Math.max(currentMaxLen, newMaxLen)
 			}
 		}
-		result = result > currentMaxLen ? result : currentMaxLen
+		result = Math.max(result, currentMaxLen)
 		maxDistances.push(currentMaxLen)
 	}
 
@@ -26,6 +25,7 @@ const lengthOfLIS = (nums: number[]): number => {
 		[10, 9, 2, 5, 3, 7, 101, 18],
 		[0, 1, 0, 3, 2, 3],
 		[7, 7, 7, 7, 7, 7, 7],
+		[3, 5, 6, 2, 5, 4, 19, 5, 6, 7, 12],
 	]
 	inputs.forEach((input, index) =>
 		console.log(
